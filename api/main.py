@@ -49,7 +49,7 @@ def main(request):
         validate_request(request)
         print(request.args)
         
-        now = datetime.now().isoformat()
+        now = datetime.now().timestamp()
         progress_item = {}
         set_args = partial(set_if_in_args, progress_item, request)
         set_args('total')
